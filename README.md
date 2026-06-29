@@ -2,7 +2,7 @@
 
 Este diretório contém a análise exploratória para predição de risco de DKA usando janelas temporais e XGBoost.
 
-Importante: considere apenas esta pasta (`AnaliseExploratória`) como projeto ativo. A subpasta `TCC/` aqui dentro é uma cópia antiga e não deve ser usada.
+Importante: considere apenas esta pasta (`previsaoDKAXGBoost`) como projeto ativo.
 
 ## Estrutura principal
 
@@ -19,7 +19,7 @@ Importante: considere apenas esta pasta (`AnaliseExploratória`) como projeto at
 1. Entre na pasta do projeto:
 
 ```powershell
-cd "c:\Users\josuc\OneDrive - PUCRS - BR\PUCRS\2026_01\TCC\AnaliseExploratória"
+cd previsaoDKAXGBoost
 ```
 
 2. Crie o ambiente virtual (caso necessário):
@@ -51,9 +51,10 @@ pip install -r requirements.txt
 Saídas esperadas:
 - Tabelas de distribuição de `risk_score`.
 - Métricas (MAE, RMSE, etc.).
-- Gráficos comparativos 7 dias vs 14 dias.
+- Gráficos comparativos de janelas temporais (3, 7 e 14 dias quando houver amostras válidas).
 - Pré-visualização opcional de um CSV processado.
 - Geração opcional de `session_labels.csv` dentro do próprio notebook.
+- Imagem de apoio da análise em `temporal_analysis.png`.
 
 ## Como rodar os testes
 
@@ -69,4 +70,4 @@ A validação recomendada é:
 
 - Erro de pacote ausente: execute novamente `pip install -r requirements.txt`.
 - Kernel errado no notebook: troque para o Python da `.venv`.
-- Caminho de dados não encontrado: confirme se as pastas `Ohio2018_processed/` e `Ohio2020_processed/` existem dentro de `AnaliseExploratória`.
+- Caminho de dados não encontrado: confirme se as pastas `Ohio2018_processed/` e `Ohio2020_processed/` existem dentro de `previsaoDKAXGBoost`.
